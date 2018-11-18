@@ -2,7 +2,7 @@
 import json
 import requests
 
-TOKEN="EAAEgO7dp1aoBAN1LfLWZCxZBpS5660XGiTvnVl3P7fvLYt9bJ7BKWPTntBWYZCyi30ZA1axppJOAXKyo7SWCTPSYQyZAC8RoEZCpT2tAAVha7V87V26iED4e1x14Ilf6qSZBT4tfZCBBZA4yAr35J9CG3IBoqK6wMrwBhQ1sdfItnVlrIuQNnJH6BFzm7gx4vB9kXdqpFzwVEa7pytPbrFwWf"
+TOKEN="EAAEgO7dp1aoBAGOgPHMgTx01q44AiKfjudvQuoy0fzBhZAk9DPgZCtrhUMrYJIZBDPZCaL6jTP045tkyizJ9NZAXeDZClXEq2ubDOhBZCUBc1w0UwB6GuN1YVUCmqw6LsQZA43x5dtPWAZAohpaMimcoFDr6dviQUfhaVZBJbtcrMF1xy5dqAUhA0WZBZAHzCJYBGiCs9MzqFojdGyA0eI6MuW15"
 #graph=facebook.GraphAPI(access_token=TOKEN, version="2.12")
 
 def get_posts():
@@ -26,3 +26,5 @@ def process(data):
 
 def get_processed_data():
     return json.dumps(process(get_posts()))
+
+get_posts()

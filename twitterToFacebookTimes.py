@@ -1,5 +1,4 @@
 def getNumMonth(month):
-    print(month)
     if month=="Jan":
         return "01"
     elif month=="Feb":
