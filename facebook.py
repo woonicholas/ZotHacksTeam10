@@ -24,7 +24,5 @@ def process(data):
         processed.append(processed_post)
     return processed
 
-return_json = json.dumps(process(get_posts()))
-file=open("facebook_data.json", "w")
-file.write(return_json)
-file.close()
+def get_processed_data():
+    return json.dumps(process(get_posts()))
