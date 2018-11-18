@@ -10,13 +10,12 @@ def sort_time(a,b):
 def sort_data(data):
 	return sorted(data,key = lambda x: x["time"],reverse = True)
 
-fb_data = facebook.process(facebook.get_posts())
-tw_data = TwitterMain.process()
-TwitterMain.changeTimes(tw_data)
 
-final = {"data": sort_data(fb_data + tw_data)}
+def process_final():
+	fb_data = facebook.process(facebook.get_posts())
+	tw_data = TwitterMain.process()
+	TwitterMain.changeTimes(tw_data)
 
-return_json = json.dumps(final)
-file=open("social_media_data.json", "w")
-file.write(return_json)
-file.close()
+	final = {"data": sort_data(fb_data + tw_data)}
+
+	return json.dumps(final)
